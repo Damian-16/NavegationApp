@@ -11,8 +11,8 @@ export const  StackNavigator =()=> {
   return (
     <Stack.Navigator>
       <Stack.Screen name="Home" component={Pagina1Screen} />
-      <Stack.Screen name="Notifications" component={Pagina2Screen} />
-      <Stack.Screen name="Profile" component={Pagina3Screen} />
+      <Stack.Screen name="pagina2" component={Pagina2Screen} />
+      <Stack.Screen name="pagina3" component={Pagina3Screen} />
      
     </Stack.Navigator>
   );
