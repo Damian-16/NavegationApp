@@ -9,13 +9,38 @@ export const Pagina2Screen = () => {
     return (
         <View style={styles.globalMargin}>
             <Text style={styles.title}>Pag 2</Text>
-            <Button title="Ir ala Pagina 3" onPress={()=>navigator.navigate('pagina3')}/>
-            <TouchableOpacity onPress={()=>navigator.navigate('personaScreen',
+            <Button title="Ir ala Pagina 3" onPress={()=>navigator.navigate('Pagina3Screen')}/>
+           <View style={{flexDirection:'row'}}>
+           <TouchableOpacity 
+           style={styles.botonGrande}
+           onPress={()=>navigator.navigate('PersonaScreen',
             {
                 id:1,
                 nombre:'pedro'
             })}>
-                <Text>Ir ala persona</Text></TouchableOpacity>
+                <Text style={styles.botonGrandeTexto}>Ir ala persona</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity 
+                style={styles.botonGrande}
+                onPress={()=>navigator.navigate('PersonaScreen',
+            {
+                id:2,
+                nombre:'maria'
+            })}>
+                <Text style={styles.botonGrandeTexto}>maria</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                 style={styles.botonGrande}
+                 onPress={()=>navigator.navigate('PersonaScreen',
+            {
+                id:3,
+                nombre:'shorch'
+            })}>
+                <Text style={styles.botonGrandeTexto}>george</Text>
+                </TouchableOpacity>
+           </View>
         </View>
     )
 }
