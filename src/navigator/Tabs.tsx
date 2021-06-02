@@ -3,14 +3,26 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Tab1Screen } from '../screens/Tab1Screen';
 import { Tab2Screen } from '../screens/Tab2Screen';
+import { StackNavigator } from './StackNavigator';
+import { colors } from '../theme/appTheme';
 
 const Tab = createBottomTabNavigator();
 
 export const Tabs=()=> {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Tab1Screen" component={Tab1Screen} />
-      <Tab.Screen name="Tab2Screen" component={Tab2Screen} />
+    <Tab.Navigator
+    tabBarOptions={{
+    activeTintColor:colors.primary,
+    style:{
+        borderTopColor:colors.primary,
+        borderTopWidth:0,
+        elevation:0,
+    }}}
+
+    >
+      <Tab.Screen name="Tab1Screen" options={{title:"tab1"}} component={Tab1Screen} />
+      <Tab.Screen name="Tab2Screen" options={{title:"tab2"}} component={Tab2Screen} />
+      <Tab.Screen name="StackNavigator" options={{title:"Stack"}} component={StackNavigator} />
     </Tab.Navigator>
   );
 }
