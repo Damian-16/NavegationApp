@@ -14,7 +14,8 @@ export const Pagina2Screen = () => {
            <TouchableOpacity 
            style={{
                ...styles.botonGrande,
-               backgroundColor:'#5856D6'
+               backgroundColor:'#5856D6',
+               marginLeft:10,
         }}
            onPress={()=>navigator.navigate('PersonaScreen',
             {
