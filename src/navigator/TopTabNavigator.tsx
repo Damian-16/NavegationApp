@@ -6,6 +6,7 @@ import { AlbumScreen } from '../screens/AlbumScreen';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { colors, styles } from '../theme/appTheme';
 import { Text } from 'react-native';
+import  Icon  from 'react-native-vector-icons/Ionicons';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -37,16 +38,17 @@ export const TopTabNavigator=()=> {
         let iconName:string = '';
         switch(route.name){
             case 'ChatScreen':
-                iconName='CH'
+                iconName='chatbubble-ellipses-outline'
                 break;
             case 'ContactScreen':
-                iconName='CtC'
+                iconName='people-outline'
                 break;
             case 'AlbumScreen':
-                iconName='AL'
+                iconName='albums-outline'
                 break;
             }
-            return  <Text>{iconName}</Text>
+            // return  <Text>{iconName}</Text>
+            return <Icon name={iconName} size={20} color={color}/>
 
         }
     })}>

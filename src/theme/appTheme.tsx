@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
     menuContainer:{
       marginVertical:20,
       marginHorizontal:20,
-      alignItems:'center'
+    //   alignItems:'center'
     },
     menuBoton:{
         marginVertical:10
@@ -47,4 +47,9 @@ export const styles = StyleSheet.create({
     menuTexto:{
         fontSize:20
     },
+    icon:{
+        flex:1,
+        justifyContent:'center',
+        alignItems:'center'
+    }
 })

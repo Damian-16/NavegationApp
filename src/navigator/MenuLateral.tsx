@@ -8,6 +8,7 @@ import { useWindowDimensions, Text, View, Image } from 'react-native';
 import { styles } from '../theme/appTheme';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Tabs } from './Tabs';
+import  Icon  from 'react-native-vector-icons/Ionicons';
 
 const Drawer = createDrawerNavigator();
 
@@ -39,17 +40,25 @@ const MenuInterno = ({navigation}:DrawerContentComponentProps<DrawerContentOptio
             </View>
 
             {/* menu opciones */}
-            <View >
+            <View style={styles.menuContainer}>
                 <TouchableOpacity
-                 style={styles.menuContainer}
+                 style={{
+                     ...styles.menuBoton,
+                    flexDirection:'row'
+                }}
                  onPress={()=>navigation.navigate("StackNavigator")}>
+                        <Icon name="compass-outline" size={30} color='black' />
                     <Text style={styles.menuTexto}>Navegacion</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
-                 style={styles.menuContainer}
+                 style={{
+                     ...styles.menuBoton,
+                     flexDirection:'row'
+                }}
                  onPress={()=>navigation.navigate("Article")}>
-                    <Text>Ajustes</Text>
+                     <Icon name="settings-outline" size={30} color='black'/>
+                    <Text style={styles.menuTexto}>Ajustes</Text>
                 </TouchableOpacity>
 
             </View>

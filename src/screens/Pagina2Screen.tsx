@@ -2,6 +2,7 @@ import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { Text, View, Button } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import Icon  from 'react-native-vector-icons/Ionicons';
 import { styles } from '../theme/appTheme';
 
 export const Pagina2Screen = () => {
@@ -22,6 +23,7 @@ export const Pagina2Screen = () => {
                 id:1,
                 nombre:'pedro'
             })}>
+                  <Icon name="person-outline" size={30} color="#980" />
                 <Text style={styles.botonGrandeTexto}>Ir ala persona</Text>
                 </TouchableOpacity>
 
@@ -34,6 +36,7 @@ export const Pagina2Screen = () => {
                 id:2,
                 nombre:'maria'
             })}>
+             <Icon name="woman-outline" size={30} color="#980" />
                 <Text style={styles.botonGrandeTexto}>maria</Text>
                 </TouchableOpacity>
 
@@ -44,6 +47,7 @@ export const Pagina2Screen = () => {
                 id:3,
                 nombre:'shorch'
             })}>
+                <Icon  name="man-outline" size={30} color='black'  />
                 <Text style={styles.botonGrandeTexto}>george</Text>
                 </TouchableOpacity>
            </View>

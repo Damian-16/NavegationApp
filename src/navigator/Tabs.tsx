@@ -7,6 +7,7 @@ import { StackNavigator } from './StackNavigator';
 import { colors } from '../theme/appTheme';
 import { Text } from 'react-native';
 import { TopTabNavigator } from './TopTabNavigator';
+import Icon  from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
 
@@ -40,7 +41,8 @@ export const Tabs=()=> {
                     iconName='Stk'
                     break;
             }
-            return <Text>{iconName}</Text>
+            // return <Text>{iconName}</Text>
+            return <Icon name="airplane-outline" size={size} color={color} />
         }
     })}
 
