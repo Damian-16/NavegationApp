@@ -10,9 +10,12 @@ export const Pagina2Screen = () => {
         <View style={styles.globalMargin}>
             <Text style={styles.title}>Pag 2</Text>
             <Button title="Ir ala Pagina 3" onPress={()=>navigator.navigate('Pagina3Screen')}/>
-           <View style={{flexDirection:'row'}}>
+           <View style={{flexDirection:'row',justifyContent:'center',padding:5}}>
            <TouchableOpacity 
-           style={styles.botonGrande}
+           style={{
+               ...styles.botonGrande,
+               backgroundColor:'#5856D6'
+        }}
            onPress={()=>navigator.navigate('PersonaScreen',
             {
                 id:1,
@@ -22,7 +25,9 @@ export const Pagina2Screen = () => {
                 </TouchableOpacity>
 
                 <TouchableOpacity 
-                style={styles.botonGrande}
+                style={{
+                    ...styles.botonGrande,
+                    backgroundColor:'#FF9427'}}
                 onPress={()=>navigator.navigate('PersonaScreen',
             {
                 id:2,
