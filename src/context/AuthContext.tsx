@@ -1,8 +1,7 @@
-// definir como luce y que informacion tendre
-
 import React,{ createContext, useReducer } from "react"
 import { authReducer } from "./authReducer";
 
+// definir como luce y que informacion tendre
 export interface AuthState{
     isLoggedIn:boolean;
     username?:string;
@@ -22,6 +21,7 @@ export const authInitialState:AuthState ={
 export interface AuthContextProps{
     authState:AuthState;
     signIn:()=>void;
+    changeFavoriteIcon: (iconName: string) => void;
 }
 
 //crear el contexto
@@ -39,7 +39,10 @@ export const AuthProvider=({children}:any)=>{
         dispatch({type:'signIn'})
     }
 
-
+   
+    const changeFavoriteIcon = (iconName:string)=>{
+        dispatch({type:'changeFavIcon',payload:iconName})
+    }
 
 
     return(
@@ -47,6 +50,7 @@ export const AuthProvider=({children}:any)=>{
             // authState:authInitialState,
             authState:authState,
             signIn:signIn,
+            changeFavoriteIcon,
         }}>
             {children}
         </AuthContext.Provider>

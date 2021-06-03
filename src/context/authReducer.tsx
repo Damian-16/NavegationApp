@@ -2,7 +2,9 @@
 import { AuthState } from './AuthContext';
 
 
-type AuthAction = {type:'signIn'}
+type AuthAction = 
+| {type:'signIn'}
+| {type:'changeFavIcon',payload:string}
 
              //genera estado
 export const authReducer =(state:AuthState,action:AuthAction): AuthState=>{
@@ -16,6 +18,12 @@ export const authReducer =(state:AuthState,action:AuthAction): AuthState=>{
                isLoggedIn:true,
                username:'no-username-yet' //de esta manera regreso un nuevo estado sin mutar el original
            }
+
+        case 'changeFavIcon':
+            return{
+                ...state,
+                favoriteIcon:action.payload
+            }
            
            break;
    
