@@ -10,6 +10,7 @@
 import { StackNavigator } from './src/navigator/StackNavigator';
 import { MenuLateralBasico } from './src/navigator/MenuLateralBasico';
 import { MenuLateral } from './src/navigator/MenuLateral';
+import { AuthProvider } from './src/context/AuthContext';
 
 
 
@@ -18,14 +19,28 @@ import { MenuLateral } from './src/navigator/MenuLateral';
 
    return (
      <NavigationContainer>
-{/*       
-       <StackNavigator/> */}
-       {/* <MenuLateralBasico/> */}
-       <MenuLateral/>
+
+
+        <AppState>
+           {/*<StackNavigator/> */}
+           {/* <MenuLateralBasico/> */}
+          <MenuLateral/>
+        </AppState>
+    
      </NavigationContainer>
    )
      
          
  };
+
+
+                 //({children}:{children:JSX.Element})=>   si espera u solo componente termina en Element,si no con un []
+ const AppState = ({children}:any)=>{
+   return(
+   <AuthProvider>
+     {children}
+   </AuthProvider>
+     )
+ }
 
  export default App;
